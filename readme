@@ -1,0 +1,5 @@
+Tanja Tong A00907319
+Cody Lin A00933265
+
+$this->data['okornot'] = $this->orders->validate($num) ? "" : "disabled"; 
+this line should be like --->  $this->data['okornot'] = $this->orders->validate($order_num) ? "" : "disabled";
