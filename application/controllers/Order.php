@@ -118,10 +118,7 @@ class Order extends Application {
     // cancel the order
     function cancel($order_num) 
     {
-         $this->orderitems->delete_some($order_num);
-         $record = $this->orders->get($order_num);
-         $record->status = 'x';
-         $this->orders->update($record);
+        $this->orders->flush($order_num);
         //FIXME
         redirect('/');
     }
